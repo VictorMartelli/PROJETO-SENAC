@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomos do Tempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img class="logoimg" src="img/logoM.jfif" alt="Logo do Site">
+    <div class="logo">
+        <h1>Tomos do Tempo</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="liv_pessoa">Livro</a></li>
+            <li><a href="cad_pessoa">Cadastrar-se</a></li>
+            <li><a  th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<form class="cad" th:object="${livro}" th:action="@{/cLivro/add_livro}" method="post">
+
+    <h1>Cadastro de Livros</h1>
+    <br><br>
+
+    <label for="titulo">Título:</label>
+    <input th:field="*{titulo}" id="titulo" type="text" required>
+    <br>
+
+    <label for="autor">Autor:</label>
+    <input th:field="*{autor}" id="autor" type="text" required>
+    <br>
+
+    <label for="descricao">Descrição:</label>
+    <input th:field="*{descricao}" id="descricao" type="text" required>
+    <br><br>
+
+    <input style="background-color:#104C34; color:white" type="submit" value="Cadastrar">
+
+</form>
+
+<footer class="footer">
+    <p>&copy; 2024 Tomos do tempo. Todos os direitos reservados.</p>
+</footer>
+
+
+</body>
+</html>

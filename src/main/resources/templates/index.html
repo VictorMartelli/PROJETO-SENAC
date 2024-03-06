@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+</head>
+<body>
+Seja bem vindo
+
+<br><br>
+
+Entrar:
+<br>
+<form th:object="${loginDTO}" th:action="@{/entrar}" method="post">
+    <label for="email">E-mail:</label>
+    <input th:field="*{email}" id="email" type="email">
+    <br>
+    <label for="senha">Senha:</label>
+    <input th:field="*{senha}" id="senha" type="password">
+    <br><br>
+    <input type="submit" value="Entrar">
+</form>
+
+
+<br><br> <br><br>
+
+<a href="cad_pessoa">Cadastrar Pessoa</a>
+</body>
+</html>

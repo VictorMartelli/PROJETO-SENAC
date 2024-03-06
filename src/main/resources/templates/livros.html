@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomos do Tempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <img class="logoimg" src="img/logoM.jfif" alt="Logo do Site">
+        <div>
+
+            <h1>Tomos do Tempo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="liv_pessoa">Livro</a></li>
+                <li><a href="cad_pessoa">Cadastrar-se</a></li>
+                <li><a  th:href="@{/logout}">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+           <h1 class="alinhamento">Livros</h1>
+    <div id="content">
+        
+        <article>
+
+            <h3 class="teste">Título do Livro</h3>
+            <h4 class="teste">Blak Hood</h4>
+ 
+            <a href="blak_pessoa"><img class="img" src="img/capalivro.jfif" /></a>
+
+        </article>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tomos do tempo. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

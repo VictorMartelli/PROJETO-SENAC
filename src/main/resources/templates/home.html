@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomos do Tempo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <img class="logoimg" src="img/logoM.jfif" alt="Logo do Site">
+        <div>
+
+            <h1>Bem vindos ao Tomos do Tempo!!</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="liv_pessoa">Livro</a></li>
+                <li><a href="cad_pessoa">Cadastrar-se</a></li>
+                <li><a  th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <a class="goku" href="cLivro">Adicione um livro</a>
+        <div id="content">
+
+            <ul class="livrin">
+                <li th:each="l : ${livros}">
+                    <h2 th:text="${l.titulo}"></h2>
+                    <p th:text="${l.autor}"></p>
+                    <p th:text="${l.descricao}"></p>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tomos do tempo. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
